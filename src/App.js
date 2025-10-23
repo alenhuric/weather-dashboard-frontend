@@ -20,7 +20,9 @@ function App() {
     setWeather(null);
 
     try {
-      const response = await axios.get(`http://127.0.0.1:8080/weather/${city}`);
+      const response = await axios.get(
+        `https://weather-dashboard-backend-kc4y.onrender.com/weather/${city}`
+      );
       setWeather(response.data);
     } catch (err) {
       setError("Unable to fetch weather data. Please try again.");
